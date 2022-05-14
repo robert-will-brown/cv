@@ -1,4 +1,4 @@
-name: Build LaTeX document
+name: Produce and Publish PDF
 on: [push]
 jobs:
   build_latex:
@@ -10,3 +10,11 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: rb-cv.tex
+      - name: Upload PDF to S3
+        uses: hkusu/s3-upload-action@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: 'eu-west-1'
+          aws-bucket: ${{ secrets.AWS_BUCKET }}
+          file-path: './rb-cv.pdf'
