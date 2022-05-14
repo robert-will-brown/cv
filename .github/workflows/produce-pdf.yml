@@ -1,7 +1,8 @@
 name: Produce and Publish PDF
-on: [push]
-  paths:
-    - 'rb-cv.tex'
+on:
+  push:
+    paths:
+      - 'rb-cv.tex'
 jobs:
   publish_pdf:
     runs-on: ubuntu-latest
