@@ -11,6 +11,19 @@
 \pagestyle{empty}
 \setlength{\tabcolsep}{0em}
 
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+		pdfauthor={Rob Brown},
+    pdftitle={Rob Brown - Technology Leader - Curriculum Vitae},
+		pdfsubject={Work History and Experience of Rob Brown},
+		pdfkeywords={CV, Résumé, Work History, Rob Brown},
+    pdfpagemode=FullScreen,
+    }
+
 % indentsection style, used for sections that aren't already in lists
 % that need indentation to the level of all text in the document
 \newenvironment{indentsection}[1]%
@@ -43,14 +56,14 @@
 \begin{document}
 
 \begin{center}
-{\LARGE \textbf{Robert Brown}}
+{\LARGE \textbf{Rob Brown}}
 
 robert.will.brown@gmail.com\ \ \textbullet
 \ \ London \ \textbullet
-\ \ https://my-website-here
+\ \ +44 (0) 7796 711 979
 \\
-+44 (0) 7796 711 979\ \ \textbullet
-\ \ https://linkedinhere
+\href{https://robert-will-brown.github.io}{Project Portfolio}\ \ \textbullet
+\ \ \href{https://www.linkedin.com/in/robert-w-brown/}{LinkedIn Profile}
 \end{center}
 
 \hrule
@@ -69,13 +82,14 @@ robert.will.brown@gmail.com\ \ \textbullet
 		{\emph{Chief Technology Officer}}
 		{\emph{2020 -- Present}}
 	\begin{itemize*}
-		\item Run a team of \textasciitilde25 responsible for Tech and Tech Strategy across Ostmodern and Skylark.
-		\item Restructured, modernised and aligned the technical team. Stripped out old methodologies and tech, introduced SCRUM, SRE, DevOps, Chaos Testing, and Serverless.
+		\item Lead a team of \textasciitilde25 responsible for Tech and Tech Strategy across Ostmodern and Skylark.
+		\item Restructured, modernised and aligned the technical team. Stripped out old methodologies and tech, introduced Scrum, SRE, DevOps, Chaos Testing, and Serverless.
 		\item Implemented automated team health checks and Westrum Organisational Culture to identify improvement areas in culture and ability and built a well balanced, friendly and effective team that practices open and transparent communication with the business.
 		\item Evolved the Skylark product which was non-deployable, overly-complex and poorly documented into a fast to deploy, well operated and economical to run service.
 		\item Reduced AWS bill by 50\% by building a service catalogue, grouping the services that AWS resources supported, and reducing the sizes of the resources after monitoring the load.
+		\item Oversaw the delivery of projects with Sky New Zealand, The Royal Opera House, Rakuten, F1.
 		\item Implemented standard operational practices e.g., monitoring and alerting tooling, run-books, service cataloge, oncall, continous integration and deployment.
-		\item Removed manually hosted services and tools such as Jenkins, PyPi, Sentry to SAAS services like Github Actions, AWS Code Artifact, Sentry.io allowing the team to focus on product development.
+		\item Removed manually hosted services and tools such as Jenkins, PyPi and Sentry to SAAS services like Github Actions, AWS Code Artifact and Sentry.io allowing the team to focus on product development.
 		\item Through actively choosing hosted services, infrastructure as code incorportated into the product code, and automation the infrastructure team was reduced by 75\% and the bottleknecks of the infrastrucutre team were removed.
 	\end{itemize*}
 
@@ -88,7 +102,7 @@ robert.will.brown@gmail.com\ \ \textbullet
 		{\emph{Founder \& Principal Architect}}
 		{\emph{2017 -- Present}}
 	\begin{itemize*}
-		\item Led, designed and delivered complex, international, large-scale software and infrastructure projects using modern cloud design patterns and methodologies such as Infrastructure as Code, Chaos Engineering and Agile.
+		\item Led, designed and delivered complex, international, large-scale software and infrastructure projects using modern cloud design patterns and methodologies such as Infrastructure as Code, Chaos Engineering, Ephemeral Environments and Agile.
 		\item Led multi national team to successfully build and operate a large scale Video Anti-Piracy platform. Developers and support staff in Madrid, Switzerland, Bangalore and the UK.
 	\end{itemize*}
 
@@ -101,7 +115,7 @@ robert.will.brown@gmail.com\ \ \textbullet
 		{\emph{Technical Operations Director}}
 		{\emph{2015 -- 2017}}
 	\begin{itemize*}
-		\item Responsible for the technical, pre-sales, solution architecture and operations running a team of \textasciitilde45.
+		\item Led a team of \textasciitilde45 responsible for the technical, pre-sales, solution architecture and operations.
 		\item Integrated Friend MTS services with the Olympics, Sky, BT Sport, WWE, Viacom, various MVPDs and other customer VOD and playout headends.
 		\item Translated the complex technical service into an easily understandable message for non-technical senior level customers.
 		\item Rebranded company to better reflect the industry. Aligned services and products to the market place.
@@ -119,7 +133,7 @@ robert.will.brown@gmail.com\ \ \textbullet
 		{\emph{Senior Solutions Architect}}
 		{\emph{2014 -- 2015}}
 	\begin{itemize*}
-		\item Feedback deficiencies & improvements to product into the engineering teams.
+		\item Feedback deficiencies \& improvements to product into the engineering teams.
 		\item Relationship building and internal education on product.
 		\item Simplied product into an understandable message for non-technical staff.
 		\item Pitched service to Public broadcasters, MVPDs and streaming services with existing platforms.
@@ -146,25 +160,25 @@ robert.will.brown@gmail.com\ \ \textbullet
           \headerrow
               {\textbf{OSN Play}}
               {\textbf{Dubai}}
-              OSN is a satellite broadcaster in the MENA region who wanted to release the regions first video streaming platform. I was the Senior Infrastructure Architect onsite.  Built relationships with the diverse multi-cultural teams within OSN.  Customer relationship management and troubleshooting of customer issues.
+              OSN is a satellite broadcaster in the MENA region and wanted to release the regions first video streaming platform. I was the Senior Infrastructure Architect onsite and built relationships with the diverse multi-cultural teams within OSN.  I handled the customer relationship management and troubleshooting of Priorty customer issues.
 
 					\item
           \headerrow
               {\textbf{Channel 4 Television - Streaming Service 4od (now All 4)}}
               {\textbf{London}}
-              Channel 4 was the first public broadcaster to get to market with a streaming video service.  I designed and built the infrastructure including Storage, DRM, Transcode Farm, Application and Database, Networks, Firewalls and Load balancers. Diagnosis of content preparation and site availability issues.  Built and integrated tools to monitor many components of the service for performance and availability.
+              Channel 4 was the first public broadcaster to launch a streaming video service in the UK.  Designed and built infrastructure including Storage, DRM, Transcode Farms, Database, Networks, Firewalls and Load balancers. Undertook root cause analysis of content preparation and site availability issues.  Built and integrated tools to monitor the service for performance and availability.
 
 					\item
           \headerrow
               {\textbf{SeeSaw.com / Project Kangaroo}}
               {\textbf{London}}
-              Kangaroo was the working title for a proposed streaming video platform offering content from, and owned by, the BBC, ITV and Channel 4. Ran all of the infrastructure teams including operations and architecture.  Architected and built the infrsatrucutre.  Developed process to onboard and integrate BBC, ITV and Channel 4 to receive and content and metadata. Integrated with CDNs for content distribution. Built transcode farm and workflow for generating content specific to certain devices. Implemented service monitoring platform to track metrics such as availability and responsiveness.  Internal presentations to large audiences (150+ engineers on the architecture of the platform.
+              Kangaroo was the working title for a proposed streaming video service offering content from, and owned by, the BBC, ITV and Channel 4. Ran the Infrastructure teams responsible for Architecture \& Operations. Developed processes to onboard and integrate BBC, ITV and Channel 4 to receive content and metadata. Integrated with CDNs, built transcode farm and workflow for generating video tailored to certain devices. Implemented service monitoring platform to track availability and responsiveness metrics.  Presentations to audiences of 150+ engineers on the architecture.
 
 					\item
           \headerrow
               {\textbf{Disney}}
               {\textbf{Florida}}
-              Worked on the development of the Magic Band under Disney Parks & Resorts.
+              Worked on the development of the Magic Band for Disney Parks \& Resorts.
 
 					\item
           \headerrow
@@ -176,7 +190,7 @@ robert.will.brown@gmail.com\ \ \textbullet
 				\headerrow
 						{\textbf{Sky TV - New Online Platform}}
 						{\textbf{London}}
-						With a team of software architects we designed and built the Sky TV on demand environment.  I was responsible for deciding upon system architectures, procuring and overseeing the physical installation of equipment, building and administering the environments.
+						With a team of software architects we designed and built the Sky TV New Online Platform.  Architected, procured and oversaw the physical installs.  Built and ran the platform.
 
 
 			\end{itemize}
@@ -225,13 +239,13 @@ robert.will.brown@gmail.com\ \ \textbullet
 
 \hrule
 \vspace{-0.4em}
-\subsection*{Professional Skills}
+\subsection*{Skills}
 
 \begin{indentsection}{\parindent}
 \hyphenpenalty=1000
 \begin{description*}
 		\item[Business:]
-		Proven Leadership Skills, Public Speaking, Product Management/Development, Solution Development, Organisational Growth, Team Development, Time-critical project delivery.
+		Technology and Business Leadership, Organisational Growth, Public Speaking, Product Management, Product Development, Team Development, Time-critical project delivery.
     \item[Personnal:]
 		Passionate Technologist, Pragmatic, Results-oriented, Ability to work well under pressure, Flexible, Effective Communicator.
 \end{description*}
@@ -245,7 +259,7 @@ robert.will.brown@gmail.com\ \ \textbullet
 \hyphenpenalty=1000
 \begin{description*}
 	\item[Experienced with:]
-	Streaming video services, MVPDs, Video metadata, Video assets and asset workflow, Digital content distribution, Technical media partner management, Streaming video playback authorisation and authentication, DRM, Video and Film Industry standard specifications, Digital media workflows, VOD, OTT, Anti-Piracy Technologies, Broadcast, Encoding
+	Streaming video services, MVPDs, Video metadata, Video assets and asset workflow, Digital content distribution, Technical partner management, Streaming video playback authorisation and authentication, DRM, Video and Film Industry standard specifications, Digital media workflows, VOD, OTT, Anti-Piracy Technologies, Broadcast, Encoding.
 
 \end{description*}
 \end{indentsection}
@@ -258,11 +272,11 @@ robert.will.brown@gmail.com\ \ \textbullet
 \hyphenpenalty=1000
 \begin{description*}
 	\item[Technologies:]
-	AWS, UNIX / Linux, Storage, Scripting \& Automation, Prometheus, Grafana, \LaTeX, other
+	AWS, UNIX / Linux, Storage, Scripting \& Automation, Prometheus, Grafana, \LaTeX, Containers, Shell Sripting, Ansible, Docker, CloudFormation, CDN's, Ephemeral Environments.
 	\item[Methodologies:]
-	DevOps, Site Reliability Engineering (SRE), Infrastructure as Code, Chaos Engineering, Cloud Design Patterns, Agile
+	DevOps, Site Reliability Engineering (SRE), Infrastructure as Code, Chaos Engineering, Cloud Design Patterns, Agile, Scrum, Kanban, ITIL, Continuous Delivery, Continuous Integration, Root Cause Analysis (RCA), Analytical Troubleshooting.
 	\item[Skills:]
-	Architecture, Design \& Implementation, Cloud, AWS Certified (Lapsed), RHCE (Lapsed), Certified Solaris Admin, High-Availability Infrastructure, Service \& Systems Management, Operations, Monitoring
+	Architecture, Design \& Implementation, Cloud, AWS Certified (Lapsed), RHCE (Lapsed), Certified Solaris Admin, High-Availability Infrastructure, Service \& Systems Management, Operations, Monitoring, Kepnor \& Trego trained Analytical Troubleshooting.
 \end{description*}
 \end{indentsection}
 

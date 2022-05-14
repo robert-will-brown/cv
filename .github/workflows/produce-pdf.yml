@@ -1,0 +1,22 @@
+---
+name: Produce PDF
+
+on:
+  push:
+    branches:
+    - 'main'
+  workflow_dispatch:
+
+jobs:
+  produce-pdf:
+    name: Build LaTeX document
+    jobs:
+      build_latex:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Set up Git repository
+            uses: actions/checkout@v2
+          - name: Compile LaTeX document
+            uses: xu-cheng/latex-action@v2
+            with:
+              root_file: rb-cv.tex
