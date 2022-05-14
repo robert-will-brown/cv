@@ -24,7 +24,6 @@
     % pdfpagemode=FullScreen,
     }
 
-
 % indentsection style, used for sections that aren't already in lists
 % that need indentation to the level of all text in the document
 \newenvironment{indentsection}[1]%
@@ -283,11 +282,13 @@ robert.will.brown@gmail.com\ \ \textbullet
 
 
 \hrule
-\vspace{-0.2em}
+\vspace{-0.4em}
 
 \begin{description*}
-	\item
-	\textsubscript{This CV was written in \LaTeX, and I've used a GitHub action to autogenerate this PDF. The source for this is  \href{https://github.com/robert-will-brown/cv}{here}.  @@version@@}
+  	\item
+  \headerrow
+    {{\textsubscript{CV written in \LaTeX, and uses Github action to publish this PDF. Look here if interested \href{https://github.com/robert-will-brown/cv}{here}.}}}
+    {{\textsubscript{@@version@@}}}
 
 \end{description*}
 
