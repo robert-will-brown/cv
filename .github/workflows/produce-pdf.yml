@@ -20,6 +20,5 @@ jobs:
           file-path: './rb-cv.pdf'
           output-file-url: 'true'
           destination-dir: '/'
-          public: 'true'
       - name: Show URL
         run: echo '${{ steps.upload.outputs.file-url }}'
