@@ -15,7 +15,7 @@ jobs:
       - name: Get Git Branch
         id: git_branch
         run: echo "::set-output name=git_branch::${GITHUB_REF#refs/heads/}"
-      - name: Set Git Version in Document
+      - name: Set Version in Document
         uses: jacobtomlinson/gha-find-replace@v2
         with:
           find: "@@version@@"
