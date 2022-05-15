@@ -4,13 +4,13 @@
 
 <p>
   <a href="https://rbcv.s3.eu-west-2.amazonaws.com/artifacts/rb-cv.pdf">
-    <img src="https://rbcv.s3.eu-west-2.amazonaws.com/artifacts/rb-cv-thumbnail-p1.jpg" height="420">
-    <img src="https://rbcv.s3.eu-west-2.amazonaws.com/artifacts/rb-cv-thumbnail-p2.jpg" height="420">
+    <img src="https://rbcv.s3.eu-west-2.amazonaws.com/artifacts/rb-cv-thumbnail-p1.jpg" alt="Rob Brown CV Thumbnail Page 1" height="420">
+    <img src="https://rbcv.s3.eu-west-2.amazonaws.com/artifacts/rb-cv-thumbnail-p2.jpg" alt="Rob Brown CV Thumbnail Page 2" height="420">
   </a>
 </p>
 
 
-This is my CV which I write in LaTeX and generate various end formats via an automated Github Action.  Why?  It looked fun and it's turned out to be a quick low friction method of keeping it updated. Plus, as its all automated I can do "clever" stuff like ensuring the thumbnail above always shows the latest version.
+This is my CV which I write in LaTeX and generate PDF via an automated Github Action.  Why?  It looked fun and it's turned out to be a quick low friction method of keeping it updated. Plus, as its all automated I can do "clever" stuff like ensuring the thumbnail above always shows the latest version.
 
 # How It Works
 If the TEX file `rb-cv.tex` is updated and pushed to the `main` branch, a github action is triggered.  This action:
@@ -21,9 +21,9 @@ If the TEX file `rb-cv.tex` is updated and pushed to the `main` branch, a github
  1. Uploads the PDF and Thumbnail to a public S3 bucket (click on the thumbnails above to see the resultant PDF).
 
 # My CV
-This is a concise summary of my work history at only two pages.  It contains links to my [Github Pages Portfolio](https://robert-will-brown.github.io) which adds more detail than the small space a CV allows. 
+This is a concise summary of my work history at only two pages.  It contains links to my [Github Pages Portfolio](https://robert-will-brown.github.io) which adds more detail than the small space a CV allows.
 
 # Credits
 Thanks to:
- - original author of template
- - AJS
+ - Original Template Author - https://www.toofishes.net/blog/latex-resume-follow-up/
+ - Alex Smith for reminding me I wanted to do this - https://github.com/alexjs/cv
