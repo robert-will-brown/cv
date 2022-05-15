@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - 'rb-cv.tex'
+  workflow_dispatch:
 jobs:
   publish_pdf:
     runs-on: ubuntu-latest
