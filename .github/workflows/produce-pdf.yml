@@ -29,12 +29,14 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: rb-cv.tex
-      - name: Generate Thumbnail
+      - name: Generate Thumbnail for Page 1
         uses: jruipinto/ImageMagick-action@v1
         with:
-          command: |
-            convert -density 700 -resize 10% -append -quality 98 -alpha remove rb-cv.pdf[0] rb-cv-thumbnail-p1.jpg
-            convert -density 700 -resize 10% -append -quality 98 -alpha remove rb-cv.pdf[1] rb-cv-thumbnail-p2.jpg
+          command: convert -density 700 -resize 10% -append -quality 98 -alpha remove rb-cv.pdf[0] rb-cv-thumbnail-p1.jpg
+      - name: Generate Thumbnail for Page 2
+        uses: jruipinto/ImageMagick-action@v1
+        with:
+          command: convert -density 700 -resize 10% -append -quality 98 -alpha remove rb-cv.pdf[1] rb-cv-thumbnail-p2.jpg
       - name: Upload PDF to S3
         id: upload-pdf
         uses: hkusu/s3-upload-action@v2
