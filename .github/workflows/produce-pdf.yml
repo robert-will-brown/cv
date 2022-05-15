@@ -32,7 +32,7 @@ jobs:
       - name: Generate Thumbnail
         uses: jruipinto/ImageMagick-action@v1
         with:
-          command: convert -density 700 -resize 10% -append -quality 98 -alpha remove rb-cv.pdf\[0\] rb-cv-thumbnail.jpg
+          command: convert -density 700 -resize 10% -append -quality 98 -alpha remove rb-cv.pdf[0] rb-cv-thumbnail.jpg
       - name: Upload PDF to S3
         id: upload-pdf
         uses: hkusu/s3-upload-action@v2
