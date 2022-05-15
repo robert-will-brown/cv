@@ -10,7 +10,7 @@
 </p>
 
 
-This is my CV which I write in LaTeX and generate various end formats via an automated Github Action.  Why?  It looked fun and actually it's a handy way to make updating it low friction.  Plus as its all automated so the thumbnail above always shows the latest version.
+This is my CV which I write in LaTeX and generate various end formats via an automated Github Action.  Why?  It looked fun and actually it's a handy way to make updating it low friction.  Plus as its all automated so I can do "clever" stuff like ensuring the thumbnail above always shows the latest version.
 
 # How It Works
 If the TEX file `rb-cv.tex` is updated and pushed to the `main` branch, a github action is triggered.  This action:
