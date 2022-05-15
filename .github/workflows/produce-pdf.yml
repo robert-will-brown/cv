@@ -28,6 +28,10 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: rb-cv.tex
+      - name: Generate Thumbnail
+        uses: jruipinto/ImageMagick-action@v1
+        with:
+          command: convert -density 700 -resize 10% -append -quality 98 -alpha remove rb-cv.pdf\[0\] rb-cv-thumbnail.jpg
       - name: Upload PDF to S3
         id: upload
         uses: hkusu/s3-upload-action@v2
@@ -37,7 +41,14 @@ jobs:
           aws-region: 'eu-west-1'
           aws-bucket: ${{ secrets.AWS_BUCKET }}
           file-path: './rb-cv.pdf'
-          output-file-url: 'true'
           destination-dir: '/'
-      - name: Show URL
-        run: echo '${{ steps.upload.outputs.file-url }}'
+      - name: Upload Thumbnail to S3
+        id: upload
+        uses: hkusu/s3-upload-action@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: 'eu-west-1'
+          aws-bucket: ${{ secrets.AWS_BUCKET }}
+          file-path: './rb-cv-thumbnail.jpg'
+          destination-dir: '/'
