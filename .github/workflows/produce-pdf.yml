@@ -32,7 +32,9 @@ jobs:
       - name: Generate Thumbnail
         uses: jruipinto/ImageMagick-action@v1
         with:
-          command: convert -density 700 -resize 10% -append -quality 98 -alpha remove rb-cv.pdf[0] rb-cv-thumbnail.jpg
+          command: |
+            convert -density 700 -resize 10% -append -quality 98 -alpha remove rb-cv.pdf[0] rb-cv-thumbnail-p1.jpg
+            convert -density 700 -resize 10% -append -quality 98 -alpha remove rb-cv.pdf[1] rb-cv-thumbnail-p2.jpg
       - name: Upload PDF to S3
         id: upload-pdf
         uses: hkusu/s3-upload-action@v2
@@ -52,6 +54,6 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: 'eu-west-1'
           aws-bucket: ${{ secrets.AWS_BUCKET }}
-          file-path: './rb-cv-thumbnail.jpg'
+          file-path: './rb-cv-thumbnail*'
           content-type: 'image/jpeg'
           destination-dir: '/'
