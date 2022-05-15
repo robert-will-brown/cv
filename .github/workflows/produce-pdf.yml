@@ -42,6 +42,7 @@ jobs:
           aws-region: 'eu-west-1'
           aws-bucket: ${{ secrets.AWS_BUCKET }}
           file-path: './rb-cv.pdf'
+          content-type: 'image/jpeg'
           destination-dir: '/'
       - name: Upload Thumbnail to S3
         id: upload-thumbnail
@@ -52,4 +53,5 @@ jobs:
           aws-region: 'eu-west-1'
           aws-bucket: ${{ secrets.AWS_BUCKET }}
           file-path: './rb-cv-thumbnail.jpg'
+          content-type: 'application/pdf'
           destination-dir: '/'
