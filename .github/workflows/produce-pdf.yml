@@ -49,7 +49,6 @@ jobs:
           content-type: 'application/pdf'
           destination-dir: '/'
       - name: Upload Thumbnail 1 to S3
-        id: upload-thumbnail
         uses: hkusu/s3-upload-action@v2
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
@@ -60,7 +59,6 @@ jobs:
           content-type: 'image/jpeg'
           destination-dir: '/'
       - name: Upload Thumbnail 2 to S3
-        id: upload-thumbnail
         uses: hkusu/s3-upload-action@v2
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
