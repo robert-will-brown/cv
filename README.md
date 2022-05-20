@@ -10,7 +10,7 @@
 </p>
 
 
-This is my CV which I write in LaTeX and generate PDF via an automated Github Action.  Why?  It looked fun and it's turned out to be a quick low friction method of keeping it updated. Plus, as its all automated I can do "clever" stuff like ensuring the thumbnail above always shows the latest version.
+My CV.  The source is written in LaTeX and an automated Github Action generates a PDF which is uploaded to a public S3 bucket.  Why?  It looked fun and it's turned out to be a quick low friction method of keeping it updated. Plus, as its all automated I can do "clever" stuff like ensuring the thumbnail above always shows the latest version.
 
 # How It Works
 If the TEX file `rb-cv.tex` is updated and pushed to the `main` branch, a github action is triggered.  This action:
