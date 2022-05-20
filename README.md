@@ -23,6 +23,8 @@ If the TEX file `rb-cv.tex` is updated and pushed to the `main` branch, a github
 # My CV
 This is a concise summary of my work history at only two pages.  It contains links to my [Github Pages Portfolio](https://robert-will-brown.github.io) which adds more detail than the small space a CV allows.
 
+ - <a href="https://rbcv.s3.eu-west-2.amazonaws.com/artifacts/rb-cv.pdf">Published CV</a>
+
 # Credits
 Thanks to:
  - Original Template Author - https://www.toofishes.net/blog/latex-resume-follow-up/
