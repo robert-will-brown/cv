@@ -1,8 +1,8 @@
-I design, build and run modern technology stacks that solve complex customer problems. To accomplish this, I focus on delivering key outcomes, building amazing teams and adapting to new information. 
+I design, build and run modern technology stacks that solve complex customer problems. To accomplish this, I focus on delivering key outcomes, building amazing teams and adapting to new information.
 
 I have enjoyed many positions within the Media Industry including Operations & Management, DevOps Leader, Solution Architect, Biz Dev, Strategy and Product Development for organisations like Channel 4, Sky, OSN, Disney, AT&T, NFL & Univison.
 
-I’m versatile and flexible with the proven ability to work with ambiguous and changing goals all while retaining a professional nature and sense of humour. I have experience of being part of a growing team and establishing a business from scratch. I’ve strong leadership skills, am results-orientated and focused. 
+I’m versatile and flexible with the proven ability to work with ambiguous and changing goals all while retaining a professional nature and sense of humour. I have experience of being part of a growing team and establishing a business from scratch. I’ve strong leadership skills, am results-orientated and focused.
 
 • I care about my work, I put the customer at the centre of all that I do
 • I excel at the execution of big ideas with given constraints
@@ -14,8 +14,18 @@ I’m versatile and flexible with the proven ability to work with ambiguous and 
 • I am constantly learning
 • I focus on making high-quality decisions 
 
-Professional Skills - Results-oriented | Strong public speaking and presentation skills | Strong leadership skills | Team Development | Ability to work well under pressure | Flexible and versatile | Product Development | Agile Development | Passionate Technologist | AWS Certified | Excellent English language skills | International, time-critical project delivery
- 
-Technology Expertise - Cloud | AWS | Architecture | DevOps & DevOps Management | Site Reliability Engineering (SRE) | Infrastructure as Code | Chaos Engineering | Cloud Design Patterns | High-Availability Infrastructure | Agile | Design & Implementation | Service & Systems Management | Operations | Monitoring | UNIX / Linux | Storage | Scripting & Automation skills | Learning iOS development | Prometheus | Grafana
+Skills
+Business: Technology and Business Leadership, Organisational Growth, Building Effective Teams, Public Speaking, Product Management, Product Development, Team Development, Time-critical project delivery, Relationship Management.
 
-TV & Media Tech Expertise - Streaming video services | MVPDs | Video metadata | Video assets and asset workflow | Digital content distribution | Technical media partner management | Streaming video playback authorisation and authentication | DRM | Video and Film Industry standard specifications | Digital media workflows | VOD | OTT | Anti- Piracy | Broadcast | Encoding
+Personal: Passionate Technologist, Pragmatic, Results-oriented, Ability to work well under pressure, Flexible, Effective Communicator.
+
+TV & Media Expertise
+
+Experienced with: Streaming Video Services (OTT / VOD), Monetisation Models (SVOD, AVOD, TVOD), MVPDs, Video metadata, Video assets and asset workflow, Digital content distribution, DRM, Video and Film Industry standard specifications, Digital media workflows, Anti-Piracy Technologies, Broadcast, Encoding, ffmpeg, OBS.
+
+Technology Expertise
+Technologies: AWS, UNIX / Linux, API's, Storage, Scripting & Automation, Prometheus, Grafana, \LaTeX, Containers, Shell Scripting, Ansible, Docker, CloudFormation, CDN's, HLS.
+
+Methodologies: DevOps, Site Reliability Engineering (SRE), Infrastructure as Code, Ephemeral Environments, Chaos Engineering, Cloud Design Patterns, Agile, Scrum, Kanban, ITIL, Continuous Delivery, Continuous Integration, Root Cause Analysis (RCA), Analytical Troubleshooting, Paired Programming, Test Driven Development.
+
+Skills: Architecture, Design & Implementation, Cloud, AWS Certified (Lapsed), RHCE (Lapsed), Certified Solaris Admin, High-Availability Infrastructure, Service & Systems Management, Operations, Monitoring, Kepnor & Trego trained Analytical Troubleshooting.
