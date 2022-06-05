@@ -3,6 +3,8 @@ on:
   push:
     paths:
       - 'rb-cv.tex'
+  branches:
+    - main
   workflow_dispatch:
 jobs:
   publish_pdf:
