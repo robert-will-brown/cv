@@ -1,8 +1,10 @@
 name: Produce and Publish PDF
-on:
+on:  # yamllint disable-line rule:truthy
   push:
+    branches:
+    - 'main'
     paths:
-      - 'rb-cv.tex'
+    - rb-cv.tex
   workflow_dispatch:
 jobs:
   publish_pdf:
