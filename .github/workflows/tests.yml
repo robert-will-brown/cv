@@ -1,5 +1,5 @@
 name: Tests
-on: [push, pull_request, workflow_dispatch]
+on: [pull_request, workflow_dispatch]
 jobs:
 
   spelling:
@@ -39,6 +39,11 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: rb-cv.tex
+      - name: Upload Artefact
+        uses: actions/upload-artifact@master
+        with:
+          name: rb-cv.pdf
+          path: ./rb-cv.pdf
 
   two_pages:
     name: Check Num Pages
@@ -50,7 +55,7 @@ jobs:
       - name: Download Artifact
         uses: actions/download-artifact@master
         with:
-          name: rb-cv.tex
+          name: rb-cv.pdf
           path: ./
       - name: Install pdfinfo
         run: sudo apt-get install poppler-utils
