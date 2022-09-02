@@ -3,8 +3,6 @@ on:  # yamllint disable-line rule:truthy
   push:
     tags:
     - 'v*.*'
-  schedule:
-    - cron: "40 * * * *"
   workflow_dispatch:
 jobs:
   publish_pdf:
