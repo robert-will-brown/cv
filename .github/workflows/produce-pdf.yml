@@ -27,7 +27,7 @@ jobs:
           regex: false
       - name: Retrieve Working Age
         id: workingage
-        run: echo ::set-env name=WORKING_AGE::$(cicd/CalcWorkingLife.sh)
+        run: echo "::set-output name=WORKING_AGE::$(cicd/CalcWorkingLife.sh)"
       - name: Set Working Age in Document
         uses: jacobtomlinson/gha-find-replace@v2
         with:
