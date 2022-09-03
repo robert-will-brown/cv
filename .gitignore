@@ -8,3 +8,6 @@
 *log
 *fdb_latexmk
 .DS_Store
+
+# But not
+!rb-cv_qr-code.png

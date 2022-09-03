@@ -8,6 +8,8 @@
 \usepackage[T1]{fontenc}
 \usepackage{textcomp}
 \usepackage{tgpagella}
+\usepackage{tikz}
+
 \pagestyle{empty}
 \setlength{\tabcolsep}{0em}
 
@@ -60,6 +62,12 @@
 
   \href{https://robert-will-brown.github.io}{Website \& Project Portfolio}\ |
   \href{https://www.linkedin.com/in/robert-w-brown/}{LinkedIn Profile}
+
+  \begin{tikzpicture}[remember picture, overlay]
+  \node [anchor=north east, inner sep=34pt]  at (current page.north east)
+    {\includegraphics[height=48pt]{rb-cv_qr-code.png}};
+  \end{tikzpicture}
+
 \end{center}
 
 \hrule
@@ -68,7 +76,7 @@
 
 \hyphenpenalty=1000
 \begin{itemize*}
-\item[] Hands-On Technology Leader \& CTO with @@yearsworking@@ years experience in designing, building and running teams and technology stacks that solve complex problems. A proven leader with a strong presence, capable of blending big-picture viewpoints with tactical considerations to inspire, build trust, and deliver.
+\item[] Hands-On Technology Leader \& CTO with @@yearsworking@@ years experience designing, building and running teams and technology stacks that solve complex problems. A proven leader with a strong presence, capable of blending big-picture viewpoints with tactical considerations to inspire, build trust, and deliver.
 
 \vspace{+0.4em}
 Held key positions in teams that built many of the fledgling Video streaming \& OTT services - Channel 4, Sky TV, OSN and others.
