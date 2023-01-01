@@ -14,13 +14,13 @@ My CV.  The source is written in LaTeX and an automated Github Action generates 
 
 # How It Works
 ### On Push to a New Branch (Run Tests)
-If `rb-cv.tex` is updated a GitHub action is triggered which runs the `tests.yml` which has the following tests:
+If `rb-cv.tex` is updated a GitHub action `tests.yml` is triggered which runs the following tests:
 
  1. Uses `hunspell` to check the correctness of spellings (add out of dictionary words to `/dict/words`).
  1. Use `pdfinfo` to compile the `rb-cv.tex` LaTeX file into a PDF and then check how many pages it spans.  It fails the pipeline if the resultant PDF spans more than two pages.
 
 ### On Creating a Tagged Release (Produce & Publish)
-Runs the `produce-pdf.yml` pipeline which produces and publishes the CV to S3.
+Runs `produce-pdf.yml` which produces and publishes the CV to S3.
 
  1. Updates the string _"with X years experience"_ with the correct number of years I've been working.
  1. Replaces tokens in `rb-cv.tex` with the date, branch and git hash to identify the version of the file.
