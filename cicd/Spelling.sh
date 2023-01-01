@@ -2,7 +2,6 @@
 #
 # Check the spelling of the LaTeX file and fail if there are errors.
 #
-
 hunspellOutput="$(hunspell -d en_GB -t -a -l -p dict/words *tex)"
 if [ "${hunspellOutput}" != "" ]; then
   # Spelling errors

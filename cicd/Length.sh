@@ -1,7 +1,8 @@
 #!/bin/bash
 #
+# Count the number of pages that the PDF file contains, if more than 2 then
+# fail.
 #
-
 set -e
 
 pdfinfo rb-cv.pdf
