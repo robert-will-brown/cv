@@ -13,10 +13,11 @@
 My CV.  The source is written in LaTeX and an automated Github Action generates a PDF which is uploaded to a public S3 bucket.
 
 # How It Works
-### On Push to a New Branch (Run Tests)
+### On Push to a New Branch (Tests)
 If `rb-cv.tex` is updated a GitHub action `tests.yml` is triggered which runs the following tests:
 
  1. Uses `hunspell` to check the correctness of spellings (add out of dictionary words to `/dict/words`).
+ 1. Checks the PDF can be complied from the LaTeX file.
  1. Use `pdfinfo` to compile the `rb-cv.tex` LaTeX file into a PDF and then check how many pages it spans.  It fails the pipeline if the resultant PDF spans more than two pages.
 
 ### On Creating a Tagged Release (Produce & Publish)
@@ -25,8 +26,8 @@ Runs `produce-pdf.yml` which produces and publishes the CV to S3.
  1. Updates the string _"with X years experience"_ with the correct number of years I've been working.
  1. Replaces tokens in `rb-cv.tex` with the date, branch and git hash to identify the version of the file.
  1. Generates a PDF from the LaTeX file.
- 1. Generates a Thumbnail JPG from the PDF.
- 1. Uploads the PDF and Thumbnail to a public S3 bucket (click on the thumbnails above to see the resultant PDF).
+ 1. Generates a Thumbnails from the PDF.
+ 1. Uploads the PDF and Thumbnails to a public S3 bucket (click on the thumbnails above to see the resultant PDF).
 
 # My CV
 This is a concise summary of my work history at only two pages.  It contains links to my [Github Pages Portfolio](https://robert-will-brown.github.io) which adds more detail than the small space a CV allows.
