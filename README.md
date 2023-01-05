@@ -16,7 +16,7 @@ My CV.  The source is written in LaTeX and an automated Github Action generates 
 ### On Push to a New Branch (Tests)
 If `rb-cv.tex` is updated a GitHub action `tests.yml` is triggered which runs the following tests:
 
- 1. Uses `hunspell` to check the correctness of spellings (add out of dictionary words to `/dict/words`).
+ 1. Uses `hunspell` to check the correctness of spellings (add out-of-dictionary words to `/dict/words`).
  1. Checks the PDF can be complied from the LaTeX file.
  1. Use `pdfinfo` to compile the `rb-cv.tex` LaTeX file into a PDF and then check how many pages it spans.  It fails the pipeline if the resultant PDF spans more than two pages.
 
