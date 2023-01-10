@@ -33,9 +33,6 @@ Runs `produce-pdf.yml` which produces and publishes the CV to S3.
  1. Generates a Thumbnails from the PDF.
  1. Uploads the PDF and Thumbnails to a public S3 bucket (click on the thumbnails above to see the resultant PDF).
 
-# My CV
-
-
 # Credits
 Thanks to:
  - Original Template Author - https://www.toofishes.net/blog/latex-resume-follow-up/
