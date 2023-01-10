@@ -10,7 +10,11 @@
 </p>
 
 
-My CV.  The source is written in LaTeX and an automated Github Action generates a PDF which is uploaded to a public S3 bucket.
+A concise summary of my work history at only two pages.  It contains links to my [Github Pages Portfolio](https://robert-will-brown.github.io) which adds more detail than the limited space allows.  
+
+The source is written in LaTeX and an automated Github Action generates a PDF which is uploaded to a public S3 bucket.
+
+ - <a href="https://rbcv.s3.eu-west-2.amazonaws.com/artifacts/rb-cv.pdf">Published CV</a>
 
 # How It Works
 ### On Push to a New Branch (Tests)
@@ -30,9 +34,7 @@ Runs `produce-pdf.yml` which produces and publishes the CV to S3.
  1. Uploads the PDF and Thumbnails to a public S3 bucket (click on the thumbnails above to see the resultant PDF).
 
 # My CV
-This is a concise summary of my work history at only two pages.  It contains links to my [Github Pages Portfolio](https://robert-will-brown.github.io) which adds more detail than the small space a CV allows.
 
- - <a href="https://rbcv.s3.eu-west-2.amazonaws.com/artifacts/rb-cv.pdf">Published CV</a>
 
 # Credits
 Thanks to:
