@@ -10,7 +10,7 @@
 </p>
 
 
-A concise summary of my work history at only two pages.  It contains links to my [Github Pages Portfolio](https://robert-will-brown.github.io) which adds more detail than the limited space allows.  
+A concise (2 page) summary of my work history.  It contains links to my [Github Pages Portfolio](https://robert-will-brown.github.io) which adds more detail than the limited space allows.  
 
 The source is written in LaTeX and an automated Github Action generates a PDF which is uploaded to a public S3 bucket.
 
