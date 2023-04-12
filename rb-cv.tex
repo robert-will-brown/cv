@@ -29,6 +29,22 @@
 % indentsection style, used for sections that aren't already in lists
 % that need indentation to the level of all text in the document
 \newenvironment{indentsection}[1]%
+
+\pgfplotsset{compat=newest}
+\pgfplotsset{every axis/.append style={
+                    axis x line=middle,
+                    axis y line=middle,
+                    axis line style={->},
+                    xlabel={$x$},
+                    ylabel={$y$},
+                    label style={font=\scriptsize},
+                    tick label style={font=\tiny},
+                    unit vector ratio*=1 1 1,
+   					xlabel style={at={(ticklabel* cs:1)},anchor=north west},
+   					ylabel style={at={(ticklabel* cs:1)},anchor=south west}
+                    }}
+
+
 {\begin{list}{}%
 	{\setlength{\leftmargin}{#1}}%
 	\item[]%
