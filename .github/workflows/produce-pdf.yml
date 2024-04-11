@@ -38,11 +38,17 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: rb-cv.tex
+      - name: Install ghostscript
+        run: sudo apt install ghostscript -y
+      - name: Workaround ghostscript vunerability protection
+        # A vunerabillty that existed in ghostscript no longer exists.  This is to work around the temporary protection
+        # that was put in place.
+        # https://stackoverflow.com/questions/52998331/imagemagick-security-policy-pdf-blocking-conversion
+        run: sed -i 's/rights="none" pattern="PDF"/rights="read | write" pattern="PDF"/' /etc/ImageMagick-6/policy.xml
       - name: Generate Thumbnail for Page 1
         uses: jruipinto/ImageMagick-action@v1
         with:
           command: |
-            #sed -i 's/rights="none" pattern="PDF"/rights="read | write" pattern="PDF"/' /etc/ImageMagick-6/policy.xml
             convert -density 700 -resize 10% -append -quality 98 -alpha remove rb-cv.pdf[0] rb-cv-thumbnail-p1.jpg
       - name: Generate Thumbnail for Page 2
         uses: jruipinto/ImageMagick-action@v1
