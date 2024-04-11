@@ -79,6 +79,6 @@ jobs:
         # A vunerabillty that existed in ghostscript no longer exists.  This is to work around the temporary protection
         # that was put in place.
         # https://stackoverflow.com/questions/52998331/imagemagick-security-policy-pdf-blocking-conversion
-        run: sudo sed -i '/disable ghostscript format types/,+6d' /etc/ImageMagick-6/policy.xml 
+        run: sudo sed -i 's/rights="none" pattern="PDF"/rights="read | write" pattern="PDF"/' /etc/ImageMagick-6/policy.xml
       - name: Run convert command 
         run: convert -density 700 -resize 10% -append -quality 98 -alpha remove rb-cv.pdf rb-cv-thumbnail-p1.jpg
