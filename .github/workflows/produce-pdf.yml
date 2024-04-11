@@ -44,7 +44,7 @@ jobs:
         # A vunerabillty that existed in ghostscript no longer exists.  This is to work around the temporary protection
         # that was put in place
         # https://stackoverflow.com/questions/52998331/imagemagick-security-policy-pdf-blocking-conversion
-        run: sed -i 's/rights="none" pattern="PDF"/rights="read | write" pattern="PDF"/' /etc/ImageMagick-6/policy.xml
+        run: sudo sed -i 's/rights="none" pattern="PDF"/rights="read | write" pattern="PDF"/' /etc/ImageMagick-6/policy.xml
       - name: Generate Thumbnail for Page 1
         uses: jruipinto/ImageMagick-action@v1
         with:
