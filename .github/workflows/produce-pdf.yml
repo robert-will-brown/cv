@@ -41,8 +41,9 @@ jobs:
       - name: Generate Thumbnail for Page 1
         uses: jruipinto/ImageMagick-action@v1
         with:
-          command: ls; ls
-          command: convert -density 700 -resize 10% -append -quality 98 -alpha remove rb-cv.pdf[0] rb-cv-thumbnail-p1.jpg
+          command: |
+            sudo sed -i 's/rights="none" pattern="PDF"/rights="read | write" pattern="PDF"/' /etc/ImageMagick-6/policy.xml
+            convert -density 700 -resize 10% -append -quality 98 -alpha remove rb-cv.pdf[0] rb-cv-thumbnail-p1.jpg
       - name: Generate Thumbnail for Page 2
         uses: jruipinto/ImageMagick-action@v1
         with:
