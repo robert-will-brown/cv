@@ -75,6 +75,8 @@ jobs:
         with:
           name: rb-cv.pdf
           path: ./
+      - name: install ghostscript
+        run: apt install ghostscript -y
       - name: Show policy.xml before
         run: sudo cat /etc/ImageMagick-6/policy.xml
       - name: Workaround ghostscript vunerability protection
