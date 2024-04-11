@@ -1,4 +1,4 @@
-name: Tests
+name: Test
 on: [pull_request, workflow_dispatch]
 jobs:
 
@@ -75,5 +75,6 @@ jobs:
         with:
           name: rb-cv.pdf
           path: ./
-      - name: Install pdfinfo
+      - name: Run convert command 
+        run: cat /etc/ImageMagick-6/policy.xml
         run: convert -density 700 -resize 10% -append -quality 98 -alpha remove rb-cv.pdf rb-cv-thumbnail-p1.jpg
