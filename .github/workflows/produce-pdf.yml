@@ -40,8 +40,8 @@ jobs:
           root_file: rb-cv.tex
       - name: Install ghostscript
         run: sudo apt install ghostscript -y
-      - name: install imagemagick
-        run: sudo apt install imagemagick -y
+      # - name: install imagemagick
+      #   run: sudo apt install imagemagick -y
       - name: Generate Thumbnail for Page 1
         #uses: jruipinto/ImageMagick-action@v1
           run: convert -density 700 -resize 10% -append -quality 98 -alpha remove rb-cv.pdf[0] rb-cv-thumbnail-p1.jpg
