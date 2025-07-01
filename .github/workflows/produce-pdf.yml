@@ -25,58 +25,58 @@ jobs:
           find: "@@version@@"
           replace: "${{ steps.date.outputs.date }}-${{ steps.git_branch.outputs.git_branch }}-${{ steps.git_hash.outputs.git_hash }}"
           regex: false
-      - name: Retrieve Working Age
-        id: workingage
-        run: echo "::set-output name=WORKING_AGE::$(cicd/CalcWorkingLife.sh)"
-      - name: Set Working Age in Document
-        uses: jacobtomlinson/gha-find-replace@v2
-        with:
-          find: "@@yearsworking@@"
-          replace: "${{ steps.workingage.outputs.WORKING_AGE }}"
-          regex: false
-      - name: Compile LaTeX Document
-        uses: xu-cheng/latex-action@v2
-        with:
-          root_file: rb-cv.tex
-      - name: Install ghostscript
-        run: sudo apt install ghostscript -y
-      # - name: install imagemagick
-      #   run: sudo apt install imagemagick -y
-      - name: Generate Thumbnail for Page 1
-        #uses: jruipinto/ImageMagick-action@v1
-          run: convert -density 700 -resize 10% -append -quality 98 -alpha remove rb-cv.pdf[0] rb-cv-thumbnail-p1.jpg
-      - name: Generate Thumbnail for Page 2
-        uses: jruipinto/ImageMagick-action@v1
-        with:
-          command: convert -density 700 -resize 10% -append -quality 98 -alpha remove rb-cv.pdf[1] rb-cv-thumbnail-p2.jpg
-      - name: Upload PDF to S3
-        id: upload-pdf
-        uses: hkusu/s3-upload-action@v2
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: 'eu-west-1'
-          aws-bucket: ${{ secrets.AWS_BUCKET }}
-          file-path: './rb-cv.pdf'
-          content-type: 'application/pdf'
-          destination-dir: '/'
-      - name: Upload Thumbnail 1 to S3
-        uses: hkusu/s3-upload-action@v2
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: 'eu-west-1'
-          aws-bucket: ${{ secrets.AWS_BUCKET }}
-          file-path: './rb-cv-thumbnail-p1.jpg'
-          content-type: 'image/jpeg'
-          destination-dir: '/'
-      - name: Upload Thumbnail 2 to S3
-        uses: hkusu/s3-upload-action@v2
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: 'eu-west-1'
-          aws-bucket: ${{ secrets.AWS_BUCKET }}
-          file-path: './rb-cv-thumbnail-p2.jpg'
-          content-type: 'image/jpeg'
-          destination-dir: '/'
+      # - name: Retrieve Working Age
+      #   id: workingage
+      #   run: echo "::set-output name=WORKING_AGE::$(cicd/CalcWorkingLife.sh)"
+      # - name: Set Working Age in Document
+      #   uses: jacobtomlinson/gha-find-replace@v2
+      #   with:
+      #     find: "@@yearsworking@@"
+      #     replace: "${{ steps.workingage.outputs.WORKING_AGE }}"
+      #     regex: false
+      # - name: Compile LaTeX Document
+      #   uses: xu-cheng/latex-action@v2
+      #   with:
+      #     root_file: rb-cv.tex
+      # - name: Install ghostscript
+      #   run: sudo apt install ghostscript -y
+      # # - name: install imagemagick
+      # #   run: sudo apt install imagemagick -y
+      # - name: Generate Thumbnail for Page 1
+      #   #uses: jruipinto/ImageMagick-action@v1
+      #     run: convert -density 700 -resize 10% -append -quality 98 -alpha remove rb-cv.pdf[0] rb-cv-thumbnail-p1.jpg
+      # - name: Generate Thumbnail for Page 2
+      #   uses: jruipinto/ImageMagick-action@v1
+      #   with:
+      #     command: convert -density 700 -resize 10% -append -quality 98 -alpha remove rb-cv.pdf[1] rb-cv-thumbnail-p2.jpg
+      # - name: Upload PDF to S3
+      #   id: upload-pdf
+      #   uses: hkusu/s3-upload-action@v2
+      #   with:
+      #     aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      #     aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      #     aws-region: 'eu-west-1'
+      #     aws-bucket: ${{ secrets.AWS_BUCKET }}
+      #     file-path: './rb-cv.pdf'
+      #     content-type: 'application/pdf'
+      #     destination-dir: '/'
+      # - name: Upload Thumbnail 1 to S3
+      #   uses: hkusu/s3-upload-action@v2
+      #   with:
+      #     aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      #     aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      #     aws-region: 'eu-west-1'
+      #     aws-bucket: ${{ secrets.AWS_BUCKET }}
+      #     file-path: './rb-cv-thumbnail-p1.jpg'
+      #     content-type: 'image/jpeg'
+      #     destination-dir: '/'
+      # - name: Upload Thumbnail 2 to S3
+      #   uses: hkusu/s3-upload-action@v2
+      #   with:
+      #     aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      #     aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      #     aws-region: 'eu-west-1'
+      #     aws-bucket: ${{ secrets.AWS_BUCKET }}
+      #     file-path: './rb-cv-thumbnail-p2.jpg'
+      #     content-type: 'image/jpeg'
+      #     destination-dir: '/'
