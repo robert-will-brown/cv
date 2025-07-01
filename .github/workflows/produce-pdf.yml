@@ -40,6 +40,8 @@ jobs:
           root_file: rb-cv.tex
       - name: Install ghostscript
         run: sudo apt install ghostscript -y
+      - name: install imagemagick
+        run: sudo apt install imagemagick -y
       - name: Workaround ghostscript vunerability protection
         # A vunerabillty that existed in ghostscript no longer exists.  This is to work around the temporary protection
         # that was put in place
