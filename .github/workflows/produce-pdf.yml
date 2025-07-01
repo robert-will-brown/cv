@@ -43,7 +43,7 @@ jobs:
       - name: install imagemagick
         run: sudo apt install imagemagick -y
       - name: Generate Thumbnail for Page 1
-          run: convert -density 700 -resize 10% -append -quality 98 -alpha remove rb-cv.pdf[0] rb-cv-thumbnail-p1.jpg
+        run: convert -density 700 -resize 10% -append -quality 98 -alpha remove rb-cv.pdf[0] rb-cv-thumbnail-p1.jpg
       - name: Generate Thumbnail for Page 2
         uses: jruipinto/ImageMagick-action@v1
         with:
