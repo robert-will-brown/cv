@@ -25,21 +25,21 @@ jobs:
           find: "@@version@@"
           replace: "${{ steps.date.outputs.date }}-${{ steps.git_branch.outputs.git_branch }}-${{ steps.git_hash.outputs.git_hash }}"
           regex: false
-      # - name: Retrieve Working Age
-      #   id: workingage
-      #   run: echo "::set-output name=WORKING_AGE::$(cicd/CalcWorkingLife.sh)"
-      # - name: Set Working Age in Document
-      #   uses: jacobtomlinson/gha-find-replace@v2
-      #   with:
-      #     find: "@@yearsworking@@"
-      #     replace: "${{ steps.workingage.outputs.WORKING_AGE }}"
-      #     regex: false
-      # - name: Compile LaTeX Document
-      #   uses: xu-cheng/latex-action@v2
-      #   with:
-      #     root_file: rb-cv.tex
-      # - name: Install ghostscript
-      #   run: sudo apt install ghostscript -y
+      - name: Retrieve Working Age
+        id: workingage
+        run: echo "::set-output name=WORKING_AGE::$(cicd/CalcWorkingLife.sh)"
+      - name: Set Working Age in Document
+        uses: jacobtomlinson/gha-find-replace@v2
+        with:
+          find: "@@yearsworking@@"
+          replace: "${{ steps.workingage.outputs.WORKING_AGE }}"
+          regex: false
+      - name: Compile LaTeX Document
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: rb-cv.tex
+      - name: Install ghostscript
+        run: sudo apt install ghostscript -y
       # # - name: install imagemagick
       # #   run: sudo apt install imagemagick -y
       # - name: Generate Thumbnail for Page 1
