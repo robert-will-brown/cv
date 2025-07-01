@@ -43,12 +43,9 @@ jobs:
       - name: install imagemagick
         run: sudo apt install imagemagick -y
       - name: Generate Thumbnail for Page 1
-        uses: jruipinto/ImageMagick-action@v1
-        run: convert -density 700 -resize 10% -append -quality 98 -alpha remove rb-cv.pdf[0] rb-cv-thumbnail-p1.jpg
+        run: magick convert -density 700 -resize 10% -append -quality 98 -alpha remove rb-cv.pdf[0] rb-cv-thumbnail-p1.jpg
       - name: Generate Thumbnail for Page 2
-        uses: jruipinto/ImageMagick-action@v1
-        with:
-          command: magick convert -density 700 -resize 10% -append -quality 98 -alpha remove rb-cv.pdf[1] rb-cv-thumbnail-p2.jpg
+        run: magick convert -density 700 -resize 10% -append -quality 98 -alpha remove rb-cv.pdf[1] rb-cv-thumbnail-p2.jpg
       # - name: Upload PDF to S3
       #   id: upload-pdf
       #   uses: hkusu/s3-upload-action@v2
