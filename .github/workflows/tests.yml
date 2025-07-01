@@ -46,7 +46,7 @@ jobs:
           path: ./rb-cv.pdf
 
   two_pages:
-    name: Is less than three pages
+    name: Is no more than two pages
     needs: build_pdf
     runs-on: ubuntu-latest
     steps:
@@ -77,6 +77,8 @@ jobs:
           path: ./
       - name: install ghostscript
         run: sudo apt install ghostscript -y
+      - name: install imagemagick
+        run: sudo apt install imagemagick -y
       - name: Workaround ghostscript vunerability protection
         # A vunerabillty that existed in ghostscript no longer exists.  This is to work around the temporary protection
         # that was put in place.
